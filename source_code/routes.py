@@ -130,7 +130,7 @@ def get_pesquisa():
         all_voos_array_json = []
         if all_voos:
             for voo in all_voos:
-                voo_json = {"origem": voo.origem, "destino": voo.destino, "assDisp": voo.assDisp, "hora": voo.hora, "tarifa": voo.tarifa}
+                voo_json = {"id": voo.id,"origem": voo.origem, "destino": voo.destino, "assDisp": voo.assDisp, "hora": voo.hora, "tarifa": voo.tarifa}
                 all_voos_array_json.append(voo_json)
                 print(voo)
         else:
