@@ -55,7 +55,7 @@ def get_airports():
         all_aeroportos = database_utils.get_airports()
         all_aeroportos_array_json = []
         for aeroporto in all_aeroportos:
-            aeroporto_json = {"nome": aeroporto.nome}
+            aeroporto_json = {"id":aeroporto.id,"nome": aeroporto.nome}
             all_aeroportos_array_json.append(aeroporto_json)
             print(aeroporto.nome)
         return json.dumps(all_aeroportos_array_json)
@@ -102,7 +102,7 @@ def get_flights():
         all_voos = database_utils.get_flights(voos_data)
         all_voos_array_json = []
         for voo in all_voos:
-            voo_json = {"origem": voo.origem, "destino": voo.destino, "assDisp": voo.assDisp, "hora": voo.hora, "tarifa": voo.tarifa}
+            voo_json = {"id": voo.id,"origem": voo.origem, "destino": voo.destino, "assDisp": voo.assDisp, "hora": voo.hora, "tarifa": voo.tarifa}
             all_voos_array_json.append(voo_json)
             print(voo.origem)
         return json.dumps(all_voos_array_json)
