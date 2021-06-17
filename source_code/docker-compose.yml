@@ -5,13 +5,12 @@
   #Nome : Leonardo Cauhi Salomão
   #Matrícula : 12011ECP016
 
-  version: "3.3"
+version: "3.3"
 
-  services:
-    flask_app:
-      build: .
-      container_name: flask_app_production
-      ports:
-        - '5000:5000'
-  
+services:
+  flask_app:
+    build: .
+    container_name: flask_app_production
+    ports:
+      - '5000:5000'
   
